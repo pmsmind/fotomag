@@ -1,4 +1,4 @@
-import 'package:flutter_travel_ui/models/goodslist_model.dart';
+import 'package:flutter_fotomag/models/goodslist_model.dart';
 
 class Destination {
   String imageUrl;

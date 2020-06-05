@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_travel_ui/models/goodslist_model.dart';
-import 'package:flutter_travel_ui/models/destination_model.dart';
+import 'package:flutter_fotomag/models/goodslist_model.dart';
+import 'package:flutter_fotomag/models/destination_model.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DestinationScreen extends StatefulWidget {
