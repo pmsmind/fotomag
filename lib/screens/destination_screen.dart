@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fotomag/models/goodslist_model.dart';
 import 'package:flutter_fotomag/models/destination_model.dart';
+import 'package:flutter_fotomag/models/goodslist_model.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_fotomag/models/shoppingcart_model.dart';
 
 class DestinationScreen extends StatefulWidget {
   final Destination destination;
@@ -10,6 +12,21 @@ class DestinationScreen extends StatefulWidget {
 
   @override
   _DestinationScreenState createState() => _DestinationScreenState();
+}
+void add(GoodsList activity) {
+  var found = false;
+  for(var a in goods) {
+    if (activity.name == a.name) {
+      print('${activity.name} Найден');
+      a.count += 1;
+      found = true;
+    }
+  }
+  if (!found) {
+    print('${activity.name} добавлен');
+    goods.add(activity);
+    goods[goods.length - 1].count = 1;
+  }
 }
 
 class _DestinationScreenState extends State<DestinationScreen> {
@@ -138,7 +155,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                   children: <Widget>[
                     Container(
                       margin: EdgeInsets.fromLTRB(40.0, 5.0, 20.0, 5.0),
-                      height: 170.0,
+                      height: 190.0,
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -175,6 +192,13 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
+                                    IconButton(
+                                      icon: Icon(Icons.add_shopping_cart),
+                                      iconSize: 30.0,
+                                      color: Colors.black,
+                                      onPressed: () => add(activity),
+                                    ),
+
                                     /*Text(
                                       'per pax',
                                       style: TextStyle(

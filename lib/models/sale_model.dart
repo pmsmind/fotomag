@@ -1,10 +1,10 @@
-class Hotel {
+class Sale {
   String imageUrl;
   String name;
   String address;
   int price;
 
-  Hotel({
+  Sale({
     this.imageUrl,
     this.name,
     this.address,
@@ -12,14 +12,14 @@ class Hotel {
   });
 }
 
-final List<Hotel> hotels = [
+final List<Sale> hotels = [
  /* Hotel(
     imageUrl: 'assets/images/hotel0.jpg',
     name: 'Hotel 0',
     address: '404 Great St',
     price: 175,
   ),*/
-  Hotel(
+  Sale(
     imageUrl: 'assets/images/tshirt2.jpg',
     name: '"Давай навсегда"',
     address: 'Футболка',

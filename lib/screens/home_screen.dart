@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fotomag/screens/shoppingcart_screen.dart';
 import 'package:flutter_fotomag/widgets/destination_carousel.dart';
-import 'package:flutter_fotomag/widgets/hotel_carousel.dart';
+import 'package:flutter_fotomag/widgets/sale_carousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -95,8 +96,17 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentTab,
         onTap: (int value) {
+          print(value);
+          if (value == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ShoppingCartScreen()),
+            );
+            value = 0;
+          }
           setState(() {
-            _currentTab = value; 
+            _currentTab = value;
+
           });
         },
         items: [
@@ -111,6 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(
               Icons.shopping_basket,
               size: 30.0,
+
             ),
             title: SizedBox.shrink(),
           ),

@@ -25,22 +25,6 @@ List<GoodsList> goodList1 = [
     rating: 5,
     price: 700,
   ),
-  /*GoodsList(
-    imageUrl: 'assets/images/podushka1.jpg',
-    name: 'Девушка',
-    type: 'Декоративная подушка',
-    size: ['1',''],
-    rating: 4,
-    price: 200,
-  ),
-  GoodsList(
-    imageUrl: 'assets/images/mask3.jpg',
-    name: 'Murano and Burano Tour',
-    type: 'Sightseeing Tour',
-    size: ['12:30 pm', '2:00 pm'],
-    rating: 3,
-    price: 125,
-  ),*/
 ];
 //podushki
 List<GoodsList> goodList2 = [
@@ -96,8 +80,8 @@ List<GoodsList> goodList3 = [
     rating: 5,
     price: 30,
   ),
-
 ];
+
 List<GoodsList> goodList4 = [
   GoodsList(
     imageUrl: 'assets/images/kruz2.jpg',
@@ -123,17 +107,19 @@ List<GoodsList> goodList4 = [
     rating: 5,
     price: 500,
   ),
-
 ];
+
 List<GoodsList> goodList5 = [
-GoodsList(
-imageUrl: 'assets/images/pazl.jpg',
-name: 'Любовь это...',
-type: 'Паззл',
-size: ['', ''],
-rating: 5,
-price: 530,
-),];
+  GoodsList(
+    imageUrl: 'assets/images/pazl.jpg',
+    name: 'Любовь это...',
+    type: 'Паззл',
+    size: ['', ''],
+    rating: 5,
+    price: 530,
+  ),
+];
+
 List<Destination> destinations = [
   Destination(
 

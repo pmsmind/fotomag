@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fotomag/models/hotel_model.dart';
+import 'package:flutter_fotomag/models/sale_model.dart';
 
 class HotelCarousel extends StatelessWidget {
   @override
@@ -40,7 +40,7 @@ class HotelCarousel extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: hotels.length,
             itemBuilder: (BuildContext context, int index) {
-              Hotel hotel = hotels[index];
+              Sale hotel = hotels[index];
               return Container(
                 margin: EdgeInsets.all(10.0),
                 width: 240.0,

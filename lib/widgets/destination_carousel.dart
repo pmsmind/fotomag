@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fotomag/models/destination_model.dart';
 import 'package:flutter_fotomag/screens/destination_screen.dart';
@@ -59,16 +60,16 @@ class DestinationCarousel extends StatelessWidget {
                     alignment: Alignment.topCenter,
                     children: <Widget>[
                       Positioned(
-                        bottom: 15.0,
+                        bottom: 60.0,
                         child: Container(
-                          height: 120.0,
-                          width: 200.0,
+                          height: 130.0,
+                          width: 220.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(10.0),
+                            padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 00.0),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -84,7 +85,9 @@ class DestinationCarousel extends StatelessWidget {
                                 Text(
                                   destination.description,
                                   style: TextStyle(
+                                    fontSize: 15.0,
                                     color: Colors.grey,
+                                    fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               ],
@@ -105,24 +108,37 @@ class DestinationCarousel extends StatelessWidget {
                           ],
                         ),
                         child: Stack(
-                          children: <Widget>[
-                            Hero(
-                              tag: destination.imageUrl,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20.0),
-                                child: Image(
-                                  height: 180.0,
-                                  width: 180.0,
-                                  image: AssetImage(destination.imageUrl),
-                                  fit: BoxFit.cover,
+                            alignment: Alignment.topCenter,
+                            children: <Widget>[
+                              SizedBox(
+                              height: 150.0,
+                              width: 230.0,
+                              child: Hero(
+                                tag: destination.imageUrl,
+                                child: Stack(
+                                  alignment: Alignment.topCenter,
+                                  children: <Widget>[
+                                    Positioned(
+                                      top: 10.0,
+                                      child: Container(
+                                        padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                                        child: Image(
+                                          width: 80,
+                                          height: 80,
+                                          image: AssetImage(destination.imageUrl),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ]
                                 ),
                               ),
                             ),
                             Positioned(
-                              left: 10.0,
-                              bottom: 10.0,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              bottom: 5.0,
+                              child: Center(
+                                child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
                                   Text(
                                     destination.typeGoods,
@@ -164,6 +180,7 @@ class DestinationCarousel extends StatelessWidget {
                                     ],
                                   ),
                                 ],
+                              ),
                               ),
                             ),
                           ],

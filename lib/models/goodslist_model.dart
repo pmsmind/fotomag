@@ -5,6 +5,7 @@ class GoodsList {
   List<String> size;
   int rating;
   int price;
+  int count;
 
   GoodsList({
     this.imageUrl,
@@ -13,5 +14,6 @@ class GoodsList {
     this.size,
     this.rating,
     this.price,
+    this.count
   });
 }
