@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fotomag/models/goodslist_model.dart';
 import 'package:flutter_fotomag/models/destination_model.dart';
-import 'package:flutter_fotomag/models/goodslist_model.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_fotomag/models/shoppingcart_model.dart';
 
 class DestinationScreen extends StatefulWidget {
-  final Destination destination;
+  final CategoryGoods destination;
 
   DestinationScreen({this.destination});
 
@@ -15,7 +14,7 @@ class DestinationScreen extends StatefulWidget {
 }
 void add(GoodsList activity) {
   var found = false;
-  for(var a in goods) {
+  for(var a in purchase) {
     if (activity.name == a.name) {
       print('${activity.name} Найден');
       a.count += 1;
@@ -24,8 +23,8 @@ void add(GoodsList activity) {
   }
   if (!found) {
     print('${activity.name} добавлен');
-    goods.add(activity);
-    goods[goods.length - 1].count = 1;
+    purchase.add(activity);
+    purchase[purchase.length - 1].count = 1;
   }
 }
 
@@ -148,9 +147,9 @@ class _DestinationScreenState extends State<DestinationScreen> {
           Expanded(
             child: ListView.builder(
               padding: EdgeInsets.only(top: 10.0, bottom: 15.0),
-              itemCount: widget.destination.activities.length,
+              itemCount: widget.destination.goods.length,
               itemBuilder: (BuildContext context, int index) {
-                GoodsList activity = widget.destination.activities[index];
+                GoodsList activity = widget.destination.goods[index];
                 return Stack(
                   children: <Widget>[
                     Container(
@@ -193,6 +192,7 @@ class _DestinationScreenState extends State<DestinationScreen> {
                                       ),
                                     ),
                                     IconButton(
+
                                       icon: Icon(Icons.add_shopping_cart),
                                       iconSize: 30.0,
                                       color: Colors.black,

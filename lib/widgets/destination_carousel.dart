@@ -43,7 +43,7 @@ class DestinationCarousel extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemCount: destinations.length,
             itemBuilder: (BuildContext context, int index) {
-              Destination destination = destinations[index];
+              CategoryGoods destination = destinations[index];
               return GestureDetector(
                 onTap: () => Navigator.push(
                   context,
@@ -75,7 +75,7 @@ class DestinationCarousel extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  '${destination.activities.length} шт.',
+                                  '${destination.goods.length} шт.',
                                   style: TextStyle(
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.w600,
@@ -171,12 +171,7 @@ class DestinationCarousel extends StatelessWidget {
                                         color: Colors.white,
                                       ),
                                       SizedBox(width: 5.0),
-                                      Text(
-                                        destination.goods,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
+
                                     ],
                                   ),
                                 ],

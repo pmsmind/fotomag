@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fotomag/models/goodslist_model.dart';
-import 'package:flutter_fotomag/models/destination_model.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_fotomag/models/shoppingcart_model.dart';
 
 class ShoppingCartScreen extends StatefulWidget {
@@ -14,7 +12,7 @@ class _ShoppingCartScreenState extends State<ShoppingCartScreen> {
   Widget build(BuildContext context) {
     var totalPrice = 0;
     var totalCount = 0;
-    for(var g in goods) {
+    for(var g in purchase) {
       totalPrice += g.count * g.price;
       totalCount += g.count;
     }
@@ -30,9 +28,9 @@ class _ShoppingCartScreenState extends State<ShoppingCartScreen> {
               Expanded(
                 child: ListView.builder(
                   padding: EdgeInsets.only(top: 40.0, bottom: 15.0),
-                  itemCount: goods.length,
+                  itemCount: purchase.length,
                   itemBuilder: (BuildContext context, int index) {
-                    GoodsList activity = goods[index];
+                    GoodsList activity = purchase[index];
                     return Stack(
                       children: <Widget>[
                         Container(

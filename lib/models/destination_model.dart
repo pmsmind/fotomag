@@ -1,23 +1,25 @@
 import 'package:flutter_fotomag/models/goodslist_model.dart';
 
-class Destination {
+class CategoryGoods {
+  String guid;
   String imageUrl;
   String typeGoods;
-  String goods;
   String description;
-  List<GoodsList> activities;
+  List<GoodsList> goods;
 
-  Destination({
+  CategoryGoods({
+    this.guid,
     this.imageUrl,
     this.typeGoods,
-    this.goods,
+
     this.description,
-    this.activities,
+    this.goods,
   });
 }
 //tshirt
 List<GoodsList> goodList1 = [
   GoodsList(
+    guid: 'DwJPQJ0XtUQSStVyX3DI',
     imageUrl: 'assets/images/tshirt1.jpg',
     name: '100% Мужик',
     type: 'Футболка',
@@ -29,6 +31,7 @@ List<GoodsList> goodList1 = [
 //podushki
 List<GoodsList> goodList2 = [
   GoodsList(
+    guid: 'fbB0lR7x797NqfpoHpu6',
     imageUrl: 'assets/images/podushka2.jpg',
     name: 'Зимние узоры',
     type: 'Декоративная подушка',
@@ -37,6 +40,7 @@ List<GoodsList> goodList2 = [
     price: 1200,
   ),
   GoodsList(
+    guid: 'Wmg8WSvu13oLoM9PjEyz',
     imageUrl: 'assets/images/podushka1.jpg',
     name: 'Девушка',
     type: 'Декоративная подушка',
@@ -44,19 +48,13 @@ List<GoodsList> goodList2 = [
     rating: 4,
     price: 1000,
   ),
-  /*GoodsList(
-    imageUrl: 'assets/images/mask3.jpg',
-    name: 'Murano and Burano Tour',
-    type: 'Sightseeing Tour',
-    size: ['12:30 pm', '2:00 pm'],
-    rating: 3,
-    price: 125,
-  ),*/
+
 ];
 
 //maski
 List<GoodsList> goodList3 = [
   GoodsList(
+    guid: 'xZiUtCHKlQCf5H3r4VuG',
     imageUrl: 'assets/images/mask.jpg',
     name: 'Белая',
     type: 'Хлопковая маска',
@@ -65,6 +63,7 @@ List<GoodsList> goodList3 = [
     price: 30,
   ),
   GoodsList(
+    guid: '6chx3I8jocxAoDVVyplM',
     imageUrl: 'assets/images/mask4.jpg',
     name: 'Черная',
     type: 'Хлопковая маска',
@@ -73,8 +72,9 @@ List<GoodsList> goodList3 = [
     price: 30,
   ),
   GoodsList(
+    guid: 'QMnGkdZpeN53gGSSFoaM',
     imageUrl: 'assets/images/mask3.jpg',
-    name: 'Красная',
+    name: 'Желтая',
     type: 'Хлопковая маска',
     size: ['S', 'M'],
     rating: 5,
@@ -84,6 +84,7 @@ List<GoodsList> goodList3 = [
 
 List<GoodsList> goodList4 = [
   GoodsList(
+    guid: 'RQdrbA9YL20avzMPf4wy',
     imageUrl: 'assets/images/kruz2.jpg',
     name: 'Капитан Америка',
     type: 'Кружка',
@@ -92,6 +93,7 @@ List<GoodsList> goodList4 = [
     price: 530,
   ),
   GoodsList(
+    guid: 'sjpiMpoG4QJbX3n7oK8l',
     imageUrl: 'assets/images/kruz5.jpg',
     name: 'Эмалированная кружка',
     type: 'Кружка',
@@ -100,6 +102,7 @@ List<GoodsList> goodList4 = [
     price: 530,
   ),
   GoodsList(
+    guid: 'mgFL1PkovGFH4XNyBhKF',
     imageUrl: 'assets/images/kruz4.jpg',
     name: 'Лисенок',
     type: 'Кружка',
@@ -111,52 +114,52 @@ List<GoodsList> goodList4 = [
 
 List<GoodsList> goodList5 = [
   GoodsList(
+    guid: '0tQXXjxdaWQDomV4LIKy',
     imageUrl: 'assets/images/pazl.jpg',
     name: 'Любовь это...',
-    type: 'Паззл',
-    size: ['', ''],
+    type: 'Пазл',
+    size: ['40x40', '20x20'],
     rating: 5,
     price: 530,
   ),
 ];
 
-List<Destination> destinations = [
-  Destination(
+List<CategoryGoods> destinations = [
+  CategoryGoods(
 
-    // zameni city country это понятно, хочу сначала посмотреть где их видно кантри вообще можно убрать
-    imageUrl: 'assets/images/tshirtlogo.png',//Заменить, выглядит ужасно!!!
+    guid: 'm8g1CGy6FVljK6VGOWJG',
+    imageUrl: 'assets/images/tshirtlogo.png',
     typeGoods: 'Футболки',
-    goods: 'Футболки',
     description: 'Готовые футболки\n',
-    activities: goodList1,
+    goods: goodList1,
   ),
-  Destination(
+  CategoryGoods(
+    guid: 'amOlMND9Cqv27OFzbmdm',
     imageUrl: 'assets/images/pillowlogo.png',
     typeGoods: 'Подушки',
-    goods: 'Подушки',
     description: 'Готовые подушки\n',
-    activities: goodList2,
+    goods: goodList2,
   ),
-  Destination(
+  CategoryGoods(
+    guid: 'lDHshlSxIzZKssxt5yzx',
     imageUrl: 'assets/images/people.png',
     typeGoods: 'Маски',
-    goods: 'Маски',
     description: 'Подбери маску под настроение',
-    activities: goodList3,
+    goods: goodList3,
   ),//zapolni spiski
-  Destination(
+  CategoryGoods(
+    guid: 'b9pS9Ivc7I5VjE6njYpq',
     imageUrl: 'assets/images/kruz.jpg',
     typeGoods: 'Кружки',
-    goods: 'Кружки',
     description: 'Готовые кружки\n',
-    activities: goodList4,
+    goods: goodList4,
   ),
-  Destination(
+  CategoryGoods(
+    guid: 'ku5weWOqDSXYNWaERQc4',
     imageUrl: 'assets/images/puzzle.png',
-    typeGoods: 'Паззл',
-    goods: 'Паззл',
+    typeGoods: 'Пазл',
     description: 'Интересная головоломка для всей семьи',
-    activities: goodList5,
+    goods: goodList5,
   ),
 ];//ок 1 минутц
 

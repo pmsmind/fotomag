@@ -7,7 +7,7 @@ class Cart{
   });
 }
 
-List<GoodsList> goods = [
+List<GoodsList> purchase = [
   GoodsList(
     imageUrl: 'assets/images/tshirt1.jpg',
     name: '100% Мужик',
@@ -20,4 +20,4 @@ List<GoodsList> goods = [
 
 ];
 
-Cart userCart = Cart(purchased: goods);
+Cart userCart = Cart(purchased: purchase);

@@ -1,4 +1,5 @@
 class GoodsList {
+  String guid;
   String imageUrl;
   String name;
   String type;
@@ -8,6 +9,7 @@ class GoodsList {
   int count;
 
   GoodsList({
+    this.guid,
     this.imageUrl,
     this.name,
     this.type,
