@@ -1,4 +1,4 @@
-package com.example.flutter_travel_ui
+package com.pmsmind.fotomag
 
 import android.os.Bundle
 
