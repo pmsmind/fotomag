@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "326416432181",
+    "firebase_url": "https://fotomag-db.firebaseio.com",
+    "project_id": "fotomag-db",
+    "storage_bucket": "fotomag-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326416432181:android:096b1c2c15d28e9378057c",
+        "android_client_info": {
+          "package_name": "com.pmsmind.fotomag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "326416432181-au847u7srofcp6hmk5pmitha1vjvcd9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5DZv_tk2emZvWdPKheUH4h-MRKwitqlw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "326416432181-au847u7srofcp6hmk5pmitha1vjvcd9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
