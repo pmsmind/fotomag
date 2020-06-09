@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fotomag/screens/shoppingcart_screen.dart';
-import 'package:flutter_fotomag/widgets/destination_carousel.dart';
-import 'package:flutter_fotomag/widgets/sale_carousel.dart';
+import 'package:fotomag/screens/shoppingcart_screen.dart';
+import 'package:fotomag/widgets/destination_carousel.dart';
+import 'package:fotomag/widgets/sale_carousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {

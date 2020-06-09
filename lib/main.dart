@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fotomag/screens/home_screen.dart';
+import 'package:fotomag/screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 

@@ -1,4 +1,4 @@
-import 'package:flutter_fotomag/models/goodslist_model.dart';
+import 'package:fotomag/models/goodslist_model.dart';
 
 class CategoryGoods {
   String guid;
@@ -149,7 +149,7 @@ List<CategoryGoods> destinations = [
   ),//zapolni spiski
   CategoryGoods(
     guid: 'b9pS9Ivc7I5VjE6njYpq',
-    imageUrl: 'assets/images/kruz.jpg',
+    imageUrl: 'assets/images/cuplogo.png',
     typeGoods: 'Кружки',
     description: 'Готовые кружки\n',
     goods: goodList4,

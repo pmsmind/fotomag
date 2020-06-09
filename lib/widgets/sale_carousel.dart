@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fotomag/models/sale_model.dart';
+import 'package:fotomag/models/sale_model.dart';
 
 class HotelCarousel extends StatelessWidget {
   @override

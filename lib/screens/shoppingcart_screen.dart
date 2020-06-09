@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fotomag/models/goodslist_model.dart';
-import 'package:flutter_fotomag/models/shoppingcart_model.dart';
+import 'package:fotomag/models/goodslist_model.dart';
+import 'package:fotomag/models/shoppingcart_model.dart';
 
 class ShoppingCartScreen extends StatefulWidget {
   @override
