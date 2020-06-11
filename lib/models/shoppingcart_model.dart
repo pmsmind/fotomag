@@ -1,5 +1,4 @@
 import 'package:fotomag/models/goodslist_model.dart';
-
 class Cart{
   List<GoodsList> purchased;
 

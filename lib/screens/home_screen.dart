@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fotomag/screens/shoppingcart_screen.dart';
+import 'package:fotomag/screens/preprint_screen.dart';
 import 'package:fotomag/widgets/destination_carousel.dart';
 import 'package:fotomag/widgets/sale_carousel.dart';
+import 'package:fotomag/image_editor_pro/image_editor_pro.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,12 +14,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   int _currentTab = 0;
+
+
   List<IconData> _icons = [
     FontAwesomeIcons.tshirt,
     FontAwesomeIcons.mugHot,
-    FontAwesomeIcons.image,
     FontAwesomeIcons.couch,
-
+    FontAwesomeIcons.image,
   ];
 
   Widget _buildIcon(int index) {
@@ -25,6 +28,13 @@ class _HomeScreenState extends State<HomeScreen> {
       onTap: () {
         setState(() {
           _selectedIndex = index;
+          if (index != 3) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PreprintScreen()),
+            );
+
+          }
         });
       },
       child: Container(
@@ -41,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
           size: 25.0,
           color: _selectedIndex == index
               ? Theme.of(context).primaryColor
-              : Color(0xFFB4C1C4), //ne nado ta
+              : Color(0xFFB4C1C4), 
         ),
       ),
     );
@@ -49,6 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: SafeArea(
           
@@ -111,7 +122,9 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         items: [
           BottomNavigationBarItem(
+            backgroundColor: Colors.cyan,
             icon: Icon(
+
               Icons.search,
               size: 30.0,
             ),
@@ -137,4 +150,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-//я не смогла найти kakoi? где это меняется есть идеи?ау7 est и? sha

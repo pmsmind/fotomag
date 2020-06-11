@@ -15,20 +15,18 @@ class DestinationScreen extends StatefulWidget {
   _DestinationScreenState createState() => _DestinationScreenState();
 }
 
-class _DestinationScreenState extends State<DestinationScreen>
-    with SingleTickerProviderStateMixin {
+class _DestinationScreenState extends State<DestinationScreen> with SingleTickerProviderStateMixin {
   bool isPlaying = false;
 
   Animation animation;
 
   AnimationController controller;
-
   @override
   void initState() {
     super.initState();
 
-    controller = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 500));
+    controller = AnimationController(vsync: this,
+        duration: const Duration(milliseconds: 500));
   }
 
   Text _buildRatingStars(int rating) {
@@ -42,7 +40,7 @@ class _DestinationScreenState extends State<DestinationScreen>
 
   void add(GoodsList activity) {
     var found = false;
-    for (var a in purchase) {
+    for(var a in purchase) {
       if (activity.name == a.name) {
         print('${activity.name} Найден');
         a.count += 1;
@@ -56,6 +54,7 @@ class _DestinationScreenState extends State<DestinationScreen>
     }
   }
 
+
   @override
   void dispose() {
     controller.dispose();
@@ -66,34 +65,31 @@ class _DestinationScreenState extends State<DestinationScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //    title: Text('title'),
-      //   centerTitle: true,
-      // ),
+     // appBar: AppBar(
+     //    title: Text('title'),
+     //   centerTitle: true,
+     // ),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            floating: false,
-            pinned: true,
-            snap: false,
-            backgroundColor: Colors.pinkAccent,
+            floating: false, pinned: true, snap: false,
+            backgroundColor: Colors.cyan,
             expandedHeight: 180.0,
             flexibleSpace: FlexibleSpaceBar(
-                title: Text(widget.destination.typeGoods),
-                centerTitle: true,
-                background: Container(
-                  height: 100,
-                  child: Image.asset(widget.destination.imageUrl,
-                      fit: BoxFit.fill),
-                )),
-            leading: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: Icon(Icons.arrow_back),
+              title: Text(widget.destination.typeGoods),
+              centerTitle: true,
+              background: Container(
+                height: 100,
+                child: Image.asset(widget.destination.imageUrl, fit: BoxFit.fill),
+              )
+
             ),
+            leading: IconButton(
+              onPressed: () {Navigator.pop(context);},
+              icon: Icon(Icons.arrow_back),
+              ),
           ),
-          SliverList(
+          SliverList (
             delegate: SliverChildBuilderDelegate(
               (context, index) => Stack(
                 children: <Widget>[
@@ -137,14 +133,15 @@ class _DestinationScreenState extends State<DestinationScreen>
                                     ),
                                   ),
                                   IconButton(
-                                      icon: Icon(Icons.add_shopping_cart),
-                                      iconSize: 30.0,
-                                      color: Colors.black,
-                                      onPressed: () {
-                                        setState(() {
-                                          add(widget.destination.goods[index]);
-                                        });
-                                      }),
+                                    icon: Icon(Icons.add_shopping_cart),
+                                    iconSize: 30.0,
+                                    color: Colors.black,
+                                    onPressed: () {
+                                      setState(() {
+                                        add(widget.destination.goods[index]);
+                                      });
+                                    }
+                                  ),
                                 ],
                               ),
                             ],
@@ -155,8 +152,7 @@ class _DestinationScreenState extends State<DestinationScreen>
                               color: Colors.grey,
                             ),
                           ),
-                          _buildRatingStars(
-                              widget.destination.goods[index].rating),
+                          _buildRatingStars(widget.destination.goods[index].rating),
                           SizedBox(height: 10.0),
                           Row(
                             children: <Widget>[

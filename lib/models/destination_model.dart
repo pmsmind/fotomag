@@ -135,14 +135,14 @@ List<CategoryGoods> destinations = [
   ),
   CategoryGoods(
     guid: 'amOlMND9Cqv27OFzbmdm',
-    imageUrl: 'assets/images/pillowlogo.png',
+    imageUrl: 'assets/images/pillowlogo2.png',
     typeGoods: 'Подушки',
     description: 'Готовые подушки\n',
     goods: goodList2,
   ),
   CategoryGoods(
     guid: 'lDHshlSxIzZKssxt5yzx',
-    imageUrl: 'assets/images/people.png',
+    imageUrl: 'assets/images/masklogo.png',
     typeGoods: 'Маски',
     description: 'Подбери маску под настроение',
     goods: goodList3,
@@ -156,8 +156,8 @@ List<CategoryGoods> destinations = [
   ),
   CategoryGoods(
     guid: 'ku5weWOqDSXYNWaERQc4',
-    imageUrl: 'assets/images/puzzle.png',
-    typeGoods: 'Пазл',
+    imageUrl: 'assets/images/puzzlelogo.png',
+    typeGoods: 'Пазлы',
     description: 'Интересная головоломка для всей семьи',
     goods: goodList5,
   ),

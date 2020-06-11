@@ -78,7 +78,7 @@ class _ShoppingCartScreenState extends State<ShoppingCartScreen> {
 
                                           decoration: BoxDecoration(
                                             borderRadius: BorderRadius.circular(5.0),
-                                            color: Colors.teal,
+                                            color: Colors.cyan,
 
                                           ),
                                           child: Center(child: Text(//я хотела сделать
