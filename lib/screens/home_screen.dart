@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
           if (index != 3) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => PreprintScreen()),
+              MaterialPageRoute(builder: (context) => PreprintScreen(index)),
             );
 
           }
@@ -99,8 +99,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SizedBox(height: 20.0),
             DestinationCarousel(),
-            SizedBox(height: 20.0),
-            HotelCarousel(),
+            //SizedBox(height: 20.0),
+            SaleCarousel(),
           ],
         ),
       ),
@@ -141,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: CircleAvatar(
               radius: 15.0,
-              backgroundImage: NetworkImage('http://i.imgur.com/zL4Krbz.jpg'),
+              backgroundImage: NetworkImage('https://lh3.googleusercontent.com/ogw/ADGmqu_3bhrpUbfJO4cmkdEj_z63zWYhOL4LYTyM-Lfh=s64-c-mo'),
             ),
             title: SizedBox.shrink(),
           )

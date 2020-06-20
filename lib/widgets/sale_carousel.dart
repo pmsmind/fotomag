@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fotomag/models/sale_model.dart';
 
-class HotelCarousel extends StatelessWidget {
+class SaleCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

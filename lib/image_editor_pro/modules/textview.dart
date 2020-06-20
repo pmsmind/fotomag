@@ -29,6 +29,7 @@ class _TextViewState extends State<TextView> {
       left: widget.left,
       top: widget.top,
       child: GestureDetector(
+
           onTap: widget.ontap,
           onPanUpdate: widget.onpanupdate,
           child: Text(widget.value,

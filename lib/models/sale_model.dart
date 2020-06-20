@@ -13,12 +13,12 @@ class Sale {
 }
 
 final List<Sale> hotels = [
- /* Hotel(
-    imageUrl: 'assets/images/hotel0.jpg',
-    name: 'Hotel 0',
-    address: '404 Great St',
+ Sale(
+    imageUrl: 'assets/images/photo1.jpg',
+    name: 'В стиле Полароид',
+    address: 'Фото',
     price: 175,
-  ),*/
+  ),
   Sale(
     imageUrl: 'assets/images/tshirt2.jpg',
     name: '"Давай навсегда"',

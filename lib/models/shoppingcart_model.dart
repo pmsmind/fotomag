@@ -8,7 +8,7 @@ class Cart{
 }
 
 List<GoodsList> purchase = [
-  GoodsList(
+/*GoodsList(
     imageUrl: 'assets/images/tshirt1.jpg',
     name: '100% Мужик',
     type: 'Футболка',
@@ -17,7 +17,7 @@ List<GoodsList> purchase = [
     price: 700,
     count: 1,
   ),
-
+*/
 ];
 
 Cart userCart = Cart(purchased: purchase);

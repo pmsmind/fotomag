@@ -28,13 +28,6 @@ List multiwidget = [];
 Color currentcolors = Colors.white;
 var opicity = 0.0;
 
-List<String> itemBackground = [
-  'assets/images/bg/tshirt.png',
-  'assets/images/bg/cup.png',
-  'assets/images/bg/pillow.png',
-  ''
-];
-
 SignatureController _controller =
     SignatureController(penStrokeWidth: 5, penColor: Colors.green);
 
@@ -44,9 +37,15 @@ class ImageEditorPro extends StatefulWidget {
   final int heightCanvas;
   final int widthCanvas;
   final int itemType;
+  final String backroundImage;
 
   ImageEditorPro({
-    this.appBarColor, this.bottomBarColor, this.heightCanvas, this.widthCanvas, this.itemType
+    this.appBarColor,
+    this.bottomBarColor,
+    this.heightCanvas,
+    this.widthCanvas,
+    this.itemType,
+    this.backroundImage
   });
   @override
   _ImageEditorProState createState() => _ImageEditorProState();
@@ -186,9 +185,8 @@ class _ImageEditorProState extends State<ImageEditorPro> {
                 onPressed: () {
                   bottomSheets();
                 }),
-            new FlatButton(
-                child: new Text("ОК"),
-                textColor: Colors.white,
+            new IconButton(
+                icon: Icon(Icons.check),
                 onPressed: () {
                   File _imageFile;
                   _imageFile = null;
@@ -217,7 +215,7 @@ class _ImageEditorProState extends State<ImageEditorPro> {
           children: <Widget>[
             Positioned.fill(  //
               child: Image(
-                image: AssetImage(itemBackground[widget.itemType]),
+                image: AssetImage(widget.backroundImage),
                 fit : BoxFit.fill,
               ),
             ),

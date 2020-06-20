@@ -13,7 +13,7 @@ class _TextEditorState extends State<TextEditor> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: new AppBar(
-        backgroundColor: Colors.white30,
+        backgroundColor: Colors.cyan,
         actions: <Widget>[
           new IconButton(
               icon: Icon(FontAwesomeIcons.alignLeft), onPressed: () {}),
@@ -39,7 +39,7 @@ class _TextEditorState extends State<TextEditor> {
                 keyboardType: TextInputType.multiline,
                 maxLines: 999,
                 style: TextStyle(
-                  color: Colors.blueAccent,
+                  color: Colors.cyan,
                 ),
                 autofocus: true,
               )
@@ -54,7 +54,7 @@ class _TextEditorState extends State<TextEditor> {
             onPressed: () {
               Navigator.pop(context, name.text);
             },
-            color: Colors.black,
+            color: Colors.cyan,
             padding: EdgeInsets.all(15),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
